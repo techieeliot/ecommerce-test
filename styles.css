@@ -9,7 +9,7 @@
  body{
      
     height: 100vh;
-    100vw;
+   min-width: 100vw;
     background-color: #374859;
     font-family: 'Quicksand', sans-serif;
     
