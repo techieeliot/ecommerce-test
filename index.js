@@ -1,3 +1,4 @@
+//  for the nav bar toggle on mobile
  let toggle=document.querySelector('.toggle')
 let header=document.querySelector('header')
 let dropdown=document.querySelector('.drop-down ')
@@ -74,13 +75,13 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";
   setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
-
-// window.addEventListener('click',   translatee)
- 
-  // document.querySelector('body').style.backgroundColor='white'
-  
    
-
+// footer date
+let date=document.querySelector('.datee');
+console.log(date)
+const dateYear=new Date();
+date.textContent=dateYear.getFullYear();
+// console.log(date.getFullYear())
  
 //objects for the cart items
 const computers=[
@@ -353,11 +354,11 @@ description:''
    }
 ];
 
-let computerss=document.querySelector('#computers');
-let cardsContainer=document.querySelectorAll('.cardds')
-let cards=document.querySelectorAll('.cardd')
-let itemNamee=document.querySelectorAll('.item_name')
-let price=document.querySelectorAll('.price');
+const computerss=document.querySelector('#computers');
+const cardsContainer=document.querySelectorAll('.cardds')
+const cards=document.querySelectorAll('.cardd')
+const itemNamee=document.querySelectorAll('.item_name')
+const price=document.querySelectorAll('.price');
 
 for(var i=0;cards.length  >i;i++){
   // console.log(i);
@@ -585,18 +586,6 @@ Array.from(plus).forEach( function(itemm){
 
 
  
-function dec(){
-    if (dig>=0||dig<=0){
-        dig=0
-    }
-    // return dig;
-    num .textContent=dig;
-    if(dig==0){
-        num.style.color='blue'
-    }
-    // num.textContent='0';
-}
-// neutral.addEventListener('click',dec);
 
 function maii( ){
     
@@ -629,21 +618,7 @@ Array.from(minus).forEach( function(itemm){
 // delete
 
 let deletee=document.querySelectorAll('.remove-item');
-// Array.from(deletee).forEach( function(itemm){
-
-  
-   
  
-
-//   itemm.addEventListener('click', maiii);
-// });
-// // deletee[numm].addEventListener('click',)
-// function maiii() {
-//   // console.log(elementt)
-  
-//   // elementboss.removeChild(elementt);
-//   elementt.remove()
-// }
 
 
 
