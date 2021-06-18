@@ -640,23 +640,7 @@ border: solid 1px black;
   background-color: #717171;
 }
 
-/* Fading animation */
-/* .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 0s;
-  animation-name: fade;
-  animation-duration: 0s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-} */
+ 
 
 /* footer */
 footer{
@@ -681,35 +665,7 @@ footer{
     text-align: center;
     font-size: 80%
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* for mobile view................................................................ */
  @media screen and (max-width:700px){
          html{
      overflow: hidden;
@@ -829,20 +785,7 @@ footer{
         justify-content: center;
         align-items: center;
     }
-     /* #insta{
-        display: flex;
-        background-color: white;
-        height: 30px;
-        width: 30px;
-        border-radius: 300px;
-        justify-content: center;
-        align-items: center;
-       color: -webkit-linear-gradient(#F58529,#FEDA77,#DD2A7B,#8134AF,#515BD4, red);
-       -webkit-background-clip: text;
-       -webkit-text-fill-color: transparent;
-       border-radius: 5px;
-       
-    } */
+      
     #link{
        color: #0e76a8;
        display: flex;
@@ -1216,17 +1159,8 @@ margin-top: 50px;
     display: flex;
     width: 100%
 }
-
-
-
-
-
-
-
-
-
-
 }
+
 .nav-active{
     transform: translateX(0%)
 }
