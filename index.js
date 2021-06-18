@@ -536,6 +536,22 @@ elementt.setAttribute('id',elementid);
 // let elementnum=document.querySelector('cart-list');
 elementboss.appendChild(elementt);
 
+// banner
+const banner=document.querySelector('.cart-modal-text')
+
+
+function displayAlerts(){
+  banner.style.display='flex';
+   
+  banner.style.backgroundColor=' #42ba96';
+  banner.textContent='items added to cart  '
+  
+  setTimeout(function(){
+    banner.style.display='none';
+       
+  },1000)
+}
+displayAlerts();
 
 // for quantity selected
 let minus=elementt.querySelectorAll('#minus');
@@ -620,9 +636,27 @@ Array.from(minus).forEach( function(itemm){
  
   const cartItems = document.getElementsByClassName('cart-items')
   cartItems[0].addEventListener('click', (e) => {
+
+    const banner=document.querySelector('.cart-modal-textt')
+    function displayAlertss(){
+      banner.style.display='flex';
+      banner.style.backgroundColor=' #df4759';
+      banner.textContent='items removed from cart successfully'
+      setTimeout(function(){
+        banner.style.display='none';
+           
+      },1000)
+      
+    }
+    displayAlertss();
     if (e.target.classList.contains('remove-item')) {
       // elementboss.removeChild(elementt)
-      e.target.parentElement.parentElement.parentElement.remove()
+      e.target.parentElement.parentElement.parentElement.remove();
+  
+      
+    
+
+
   }
   })
   

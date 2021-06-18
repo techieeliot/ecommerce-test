@@ -14,6 +14,10 @@
     font-family: 'Quicksand', sans-serif;
     
  }
+ body::-webkit-scrollbar {
+  display: none;
+}
+ 
    
  header{
      display: flex;
@@ -426,7 +430,8 @@ width: 40%;
 border-radius: 5px;
 display: flex;
 flex-direction: column;
-margin-left: 60%
+margin-left: 60%;
+
 
 }
 .cart-header{
@@ -458,7 +463,8 @@ margin-left: 60%
      
 }
 .cart-items{
-flex: 11
+flex: 11;
+overflow: auto;
 }
 .cart-footer{
     border-top:solid 2px #ccc;
@@ -493,6 +499,7 @@ flex: 11
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
+    
 }
 .img-name-price{
     display: flex;
@@ -640,7 +647,40 @@ border: solid 1px black;
   background-color: #717171;
 }
 
- 
+/* successful text */
+.cart-modal-text{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color :black;
+  color: white;
+  width: 80vw;
+  margin:0 10% 0 10%;
+  height:5vh;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 2%;
+  background-color: #42ba96;
+  border-radius: 50px;
+  display: none;
+}
+.cart-modal-textt{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color :black;
+  color: white;
+  width: 30%;
+   
+  margin:0 5% 0 5%;
+  height:5vh;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 5.9%;
+  background-color: #42ba96;
+  border-radius: 50px;
+  display: none;
+}
 
 /* footer */
 footer{
@@ -667,11 +707,11 @@ footer{
 }
 /* for mobile view................................................................ */
  @media screen and (max-width:700px){
-         html{
+         /* html{
      overflow: hidden;
 
  
- }
+ } */
      body{
          background-color: #374859;
          overflow-x: hidden;
@@ -703,7 +743,8 @@ footer{
          height:12vh;
          top: 49vh;
          width:100%;
-         transform: translateX(100%);
+         display: none;
+         /* transform: translateX(100%); */
          /* transition: transform 0.5s ease-in; */
     }
      .drop-down{
@@ -715,7 +756,8 @@ footer{
            margin-right: 0%;
            width:100%;
          flex-direction: column;
-         transform: translateX(100%);
+         display: none;
+         /* transform: translateX(100%); */
          /* transition: transform 0.5s ease-in; */
      }
      .drop-down li {
@@ -739,7 +781,7 @@ footer{
           margin-right: 0%;
           width:100%;
           justify-content: space-around;
-          transform: translateX(100%);
+           
           /* transition: transform 0.5s ease-in; */
      }
 
@@ -1162,7 +1204,7 @@ margin-top: 50px;
 }
 
 .nav-active{
-    transform: translateX(0%)
+    display: flex;
 }
 
 
