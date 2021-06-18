@@ -628,50 +628,20 @@ Array.from(minus).forEach( function(itemm){
 
 // delete
 
-let deletee=document.querySelectorAll('.remove-item');
-// Array.from(deletee).forEach( function(itemm){
-
-  
-   
  
-
-//   itemm.addEventListener('click', maiii);
-// });
-// // deletee[numm].addEventListener('click',)
-// function maiii() {
-//   // console.log(elementt)
-  
-//   // elementboss.removeChild(elementt);
-//   elementt.remove()
-// }
-
-
-
-let total=document.querySelector('.totall')
- function sum(){
-   totall=0;
-   for(var i=0;i<cartItemprice.length;i++){
- 
-   }
- }
- sum()
-  //  total.textContent=sum[cartItemprice];
-  let actualElementBoss=document.querySelector('.cart-items');
-  var nodes = elementboss.getElementsByClassName("cart-list");
-  let numberr=nodes.length
-  // nodes.setAttribute('id',)
-  for(var i=0; i<nodes.length; i++) {
-    let numberr=nodes.length
-      // nodes[i].style.background = color;
-      // console.log(nodes[i]);
-      deletee[i].addEventListener('click',()=>{
-        
-        // elementt[numberr].remove()
-        // actualElementBoss.removeChild(elementt[i])
-        console.log(deletee[i].parentElement)
-        // console.log(elementt.parentElement)
-      })
+  const cartItems = document.getElementsByClassName('cart-items')
+  cartItems[0].addEventListener('click', (e) => {
+    if (e.target.classList.contains('remove-item')) {
+      // elementboss.removeChild(elementt)
+      e.target.parentElement.parentElement.parentElement.remove()
   }
+  })
+  
+
+
+
+ 
+  
 }
 // alternative idea to get the items in the cart:
 // create an array, let the array be the cart, push items unto the array,( items that are oushed into the array are the ${elementt}) ; that way u can easily access them using the array properities 
