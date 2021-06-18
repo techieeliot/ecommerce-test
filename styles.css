@@ -1088,8 +1088,8 @@ height: 74vh;
 position: absolute;
 width: 99%;
 border-radius: 5px;
-/* top:0;
-left:0; */
+top:0;
+left:0;
 display: flex;
 margin: auto;
  
