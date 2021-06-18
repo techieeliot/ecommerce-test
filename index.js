@@ -617,6 +617,7 @@ Array.from(minus).forEach( function(itemm){
 
 // delete
 
+<<<<<<< HEAD
  
   const cartItems = document.getElementsByClassName('cart-items')
   cartItems[0].addEventListener('click', (e) => {
@@ -628,6 +629,10 @@ Array.from(minus).forEach( function(itemm){
   
  
  
+=======
+let deletee=document.querySelectorAll('.remove-item');
+ 
+>>>>>>> 3e2489b357f1b8e9c30d8a84a34c98491e009093
 
 
 
