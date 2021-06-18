@@ -1148,6 +1148,23 @@ margin-top: 50px;
     flex-wrap: nowrap;
     overflow-x: scroll;
 }
+.cart-modal-textt{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color :black;
+  color: white;
+  width: 80%;
+   
+  margin:0 5% 0 5%;
+  height:5vh;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 22%;
+  background-color: #42ba96;
+  border-radius: 50px;
+  display: none;
+}
 .cardd{
     background-color: white;
     min-width:105px ; 

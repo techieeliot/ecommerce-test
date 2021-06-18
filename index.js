@@ -637,7 +637,12 @@ Array.from(minus).forEach( function(itemm){
   const cartItems = document.getElementsByClassName('cart-items')
   cartItems[0].addEventListener('click', (e) => {
 
-    const banner=document.querySelector('.cart-modal-textt')
+    
+    if (e.target.classList.contains('remove-item')) {
+      // elementboss.removeChild(elementt)
+      e.target.parentElement.parentElement.parentElement.remove();
+  
+      const banner=document.querySelector('.cart-modal-textt')
     function displayAlertss(){
       banner.style.display='flex';
       banner.style.backgroundColor=' #df4759';
@@ -649,11 +654,6 @@ Array.from(minus).forEach( function(itemm){
       
     }
     displayAlertss();
-    if (e.target.classList.contains('remove-item')) {
-      // elementboss.removeChild(elementt)
-      e.target.parentElement.parentElement.parentElement.remove();
-  
-      
     
 
 
