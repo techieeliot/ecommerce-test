@@ -475,16 +475,6 @@ e.preventDefault();
 let elementboss=document.querySelector('.cart-items');
 let listCart=document.querySelectorAll('.ccc ');
 let pi=document.querySelectorAll('.price-icon')
-// console.log(listCart)
- 
-// for(var i=0;listCart.length >i;i++){
-//   // console.log(i);
-// let idd=computers[i].id
-//   let attr=document.createAttribute('data-id')
-//   // attr.value=computers[i].id;
-//   listCart[i].setAttribute("id",attr);
-//   console.log(idd)
-//   // console.log(computers[i].id)
 let attr='';
 for(var i=0;listCart.length  >i;i++){
   console.log(i);
@@ -495,45 +485,32 @@ for(var i=0;listCart.length  >i;i++){
   listCart[i].setAttributeNode(attr)
 }
 Array.from(listCart).forEach( function(itemm){
-
-  
-   
- 
-
   itemm.addEventListener('click', addToCart);
 });
  
 function addToCart(){
-let newId=this.dataset.id;
- 
- let cartItemName=computers[newId].itemName
- let cartItemprice=computers[newId].itemPrice
-//  elementt.setAttributeNode(attr);
+let newId=this.dataset.id; 
+let cartItemName=computers[newId].itemName
+let cartItemprice=computers[newId].itemPrice
+let currency='$'
 let elementt=document.createElement('div');
 elementt.innerHTML=` <div class="cart-list" id=''>
 <div class="img-name-price">
     <img src="" alt="" class="cart-img">
     <div class="name-price">
     <p class="cart-item-name">  ${cartItemName}</p>
-    <p class='cart-item-price'>${cartItemprice}</p>
+    <p class='cart-item-price'>${currency}${cartItemprice}</p>
 </div>
 </div>
 <div class="cart-quantity-remove ">
     <div class="quantity">
-        <button class="plus-minus" id="minus">&minus;</button><div class="number-items"><p id="num">0</p></div><button id="plus" class="plus-minus">&plus;</button>
+        <button class="plus-minus minus" id="minus">&minus;</button><div class="number-items"><p class="num">1</p></div><button id="plus" class="plus-minus plus">&plus;</button>
     </div>
     <div class="remove"><button class="remove-item">Remove item</button></div>
 </div>
 </div>`;
-const elementid='';
-for(var i=0;elementt.length>i;i++){
-   elementid=i;
-  }
-console.log(elementid)
-elementt.setAttribute('id',elementid);
 
-
-// let elementnum=document.querySelector('cart-list');
+ 
 elementboss.appendChild(elementt);
 
 // banner
@@ -544,7 +521,7 @@ function displayAlerts(){
   banner.style.display='flex';
    
   banner.style.backgroundColor=' #42ba96';
-  banner.textContent='items added to cart  '
+  banner.textContent='item added to cart  '
   
   setTimeout(function(){
     banner.style.display='none';
@@ -553,116 +530,57 @@ function displayAlerts(){
 }
 displayAlerts();
 
-// for quantity selected
-let minus=elementt.querySelectorAll('#minus');
-let plus=elementt.querySelectorAll('#plus');
-let neutral=elementt.querySelectorAll('.number-item')
-let num=document.querySelectorAll('#num');
-
-let numm=0;
-for(var i=0;elementt.length>0;i++){
-  let numm=i;
- numm++;
- console.log(numm);}
- 
-
-
-
-
-let dig=0
-function mai( ){
-     
-    if (dig>=0||dig<=0){
-        dig++
-    }
-    // return dig;
-    Array.from(num).forEach( function(itemm){
-
-  itemm.textContent=dig;
-});
-    // num.textContent=dig;
-    if(dig>0){
-
-        // num.style.color='green'
-    }
-    if(dig==0){
-        // num.style.color='blue'
-    }
-     
-}
-Array.from(plus).forEach( function(itemm){
-
-  
-   
- 
-
-  itemm.addEventListener('click', mai);
-});
-// plus[numm].addEventListener('click',mai);
-
-
- 
-
-function maii( ){
-    
-    if ( dig>0){
-        dig--
-    }
-    // return dig;
-    Array.from(num).forEach( function(itemm){
-
-      itemm.textContent=dig;
-    });
-    // num.textContent=dig;
-    if(dig<0){
-        num.style.color='red'
-    }
-    if(dig==0){
-        num.style.color='blue'
-    }
-}
-Array.from(minus).forEach( function(itemm){
-
-  
-   
- 
-
-  itemm.addEventListener('click', maii);
-});
-// minus[numm].addEventListener('click',maii);
-
 // delete
-
  
   const cartItems = document.getElementsByClassName('cart-items')
   cartItems[0].addEventListener('click', (e) => {
 
     
     if (e.target.classList.contains('remove-item')) {
-      // elementboss.removeChild(elementt)
+      
       e.target.parentElement.parentElement.parentElement.remove();
   
       const banner=document.querySelector('.cart-modal-textt')
     function displayAlertss(){
       banner.style.display='flex';
       banner.style.backgroundColor=' #df4759';
-      banner.textContent='items removed from cart successfully'
+      banner.textContent='item removed from cart successfully'
       setTimeout(function(){
-        banner.style.display='none';
-           
-      },1000)
-      
+        banner.style.display='none';  
+      },1000) 
     }
     displayAlertss();
-    
-
-
   }
   })
+   
+  // minus
+elementt.addEventListener('click',(e)=>{
+  if(e.target.classList.contains('minus')){
+   let numberr=elementt.querySelector('.num');
+   if(numberr.textContent>0){
+    numberr.textContent--
+  }
+    else{
+      numberr.textContent=0;
+    }
+  }
+})
+//  plus
+elementt.addEventListener('click',(e)=>{
+  if(e.target.classList.contains('plus')){
+    console.log('jey')
+   let numberr=elementt.querySelector('.num');
+   if(numberr.textContent>-1){
+   numberr.textContent++}
+   else{
+     numberr.textContent=0;
+   }
+  }
+})
   
  
  
-// let deletee=document.querySelectorAll('.remove-item');
+ 
  
 
 
